@@ -59,7 +59,7 @@ resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
 }
 
 # Cloudfront Distribution
-resource = "aws_cloudfront_distribution" "nextjs_distribution" {
+resource "aws_cloudfront_distribution" "nextjs_distribution" {
 
     origin {
         domain_name = aws_s3_bucket.nextjs_bucket.bucket_regional_domain_name,
